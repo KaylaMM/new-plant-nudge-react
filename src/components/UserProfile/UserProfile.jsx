@@ -1,11 +1,15 @@
 import React from "react";
+import NavBar from '../NavBar/NavBar'
+import NewPlant from "../NewPlant/NewPlant";
+import PlantCard from '../PlantCard/PlantCard'
 import './UserProfile.css'
+
 
 const UserProfile = () => {
     return (
       <div className="user-profile-page">
         >
-        {/* <NavBar /> */}
+        <NavBar />
         <div className="user-profile-image">
             <img alt="" src="" />
         </div>
@@ -15,6 +19,8 @@ const UserProfile = () => {
         <p> Favorite Plant: Pathos </p>
         <button> Change Photo </button>
         </div>
+        <NewPlant />
+        <PlantCard />
       </div>
     );
 }
