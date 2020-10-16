@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 import "./Home.css";
 
 const Home = () => {
@@ -12,8 +13,8 @@ const Home = () => {
           <h3> an app to help you remember when to water your urban oasis! </h3>
         </div>
         <div className="home-page-buttons">
-          <button> Log In </button>
-          <button> Sign Up </button>
+          <Button>Log In</Button>
+          <Button>Sign Up</Button>
         </div>
       </div>
     </div>
