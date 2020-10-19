@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import LogIn from "../LogIn/LogIn";
 
 const NavBar = () => {
   return (
@@ -7,7 +7,7 @@ const NavBar = () => {
       <nav className="nav-bar" position="static">
         <img alt="" src="" className="nav-bar-logo" />
         <h3>Plant Nudge</h3>
-        <Button>Log In</Button>
+        <LogIn />
       </nav>
     </div>
   );

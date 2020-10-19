@@ -1,17 +1,17 @@
-import React from 'react';
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-const SignUp = () => {
-//   const [show, setShow] = useState(false);
+const LogIn = () => {
+  //   const [show, setShow] = useState(false);
 
-//   const handleClose = () => setShow(false);
-//   const handleShow = () => setShow(true);
+  //   const handleClose = () => setShow(false);
+  //   const handleShow = () => setShow(true);
 
   return (
     <>
       <Button variant="primary" onClick="">
-        Sign Up
+        Log In
       </Button>
 
       <Modal show="" onHide="">
@@ -30,8 +30,6 @@ const SignUp = () => {
       </Modal>
     </>
   );
-}
+};
 
-// render(<Example />);
-
-export default SignUp;
+export default LogIn;
