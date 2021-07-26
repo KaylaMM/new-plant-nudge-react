@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import { Form } from "react-bootstrap";
 
 const LogIn = () => {
   const [show, setShow] = useState(false);
@@ -18,7 +19,19 @@ const LogIn = () => {
         <Modal.Header closeButton>
           <Modal.Title>Log into your account here!</Modal.Title>
         </Modal.Header>
-        <Modal.Body>THIS IS WHERE THE LOG IN FORM WILL GO</Modal.Body>
+        <Modal.Body>
+          <Form>
+            <Form.Group className="m-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+
+            <Form.Group className="m-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control type="password" placeholder="Password" />
+            </Form.Group>
+          </Form>
+        </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Cancel

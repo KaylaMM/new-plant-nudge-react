@@ -1,16 +1,19 @@
 import React from "react";
 import LogIn from "../LogIn/LogIn";
 import SignUp from "../SignUp/SignUp";
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
 
 const NavBar = () => {
   return (
     <div>
-      <nav className="nav-bar" position="static">
-        <img alt="" src="" className="nav-bar-logo" />
-        <h3>PN</h3>
-        <LogIn />
-        <SignUp />
-      </nav>
+      <Navbar expand="lg" variant="light" bg="light">
+        <Container>
+          <Navbar.Brand href="#">PN</Navbar.Brand>
+          <LogIn />
+          <SignUp />
+        </Container>
+      </Navbar>
     </div>
   );
 };

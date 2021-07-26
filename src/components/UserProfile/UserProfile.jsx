@@ -11,9 +11,7 @@ const UserProfile = () => {
       </div>
       <div className="user-profile-info">
         <h3> IronPlanter </h3>
-        <p> 305-555-9876 </p>
         <p> Favorite Plant: Pathos </p>
-        <button> Change Photo </button>
       </div>
       <NewPlant />
       <PlantCard />
