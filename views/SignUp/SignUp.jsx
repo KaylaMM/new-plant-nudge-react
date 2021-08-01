@@ -2,8 +2,16 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Form } from "react-bootstrap";
+import AUTH_SERVICE from "../../services/AuthService.js";
 
-const SignUp = () => {
+const SignUp = (props) => {
+  //State to hold credentials in form
+  const [credentialsState, setCredentialsState] = useState({
+    email: "",
+    password: "",
+  });
+
+  //State to show modal
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -24,6 +32,11 @@ const SignUp = () => {
             <Form.Group className="m-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" placeholder="Enter email" />
+            </Form.Group>
+
+            <Form.Group className="m-3" controlId="formBasicUsername">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="user-name" placeholder="Enter your name" />
             </Form.Group>
 
             <Form.Group className="m-3" controlId="formBasicPassword">
