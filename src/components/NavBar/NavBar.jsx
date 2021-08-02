@@ -1,6 +1,6 @@
 import React from "react";
-import LogIn from "../LogIn/LogIn";
-import SignUp from "../SignUp/SignUp";
+import LogIn from "../../views/LogIn/LogIn";
+import SignUp from "../../views/SignUp/SignUp";
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 

@@ -1,6 +1,6 @@
 import React from "react";
-import NewPlant from "../NewPlant/NewPlant";
-import PlantCard from "../PlantCard/PlantCard";
+import NewPlant from "../../components/NewPlant/NewPlant";
+import PlantCard from "../../components/PlantCard/PlantCard";
 import "./UserProfile.css";
 
 const UserProfile = () => {
