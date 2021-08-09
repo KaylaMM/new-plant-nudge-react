@@ -1,16 +1,20 @@
 import React from "react";
-import Home from "./components/Home/Home.jsx";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-
-import UserProfile from "./components/UserProfile/UserProfile.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
+import Home from "./components/Home/Home.jsx";
+import UserProfile from "../src/views/UserProfile/UserProfile.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header" />
-      <Home />
-      <UserProfile />
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/user-profile" component={UserProfile} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
