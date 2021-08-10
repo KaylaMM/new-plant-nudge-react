@@ -18,6 +18,11 @@ const SignUp = (props) => {
     isLoading: false,
   });
 
+  // Function to route users to Login page
+  let handlePushToLogIn = () => {
+    return props.history.push("/login");
+  };
+
   //State to show modal
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -104,7 +109,7 @@ const SignUp = (props) => {
         </Modal.Body>
         <Modal.Footer>
           Already have an account?
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={() => handlePushToLogIn()}>
             Login
           </Button>
           <Button

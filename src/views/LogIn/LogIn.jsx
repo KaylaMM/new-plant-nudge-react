@@ -18,6 +18,11 @@ const LogIn = (props) => {
     isLoading: false,
   });
 
+  // Function to route users to Signup page
+  let handlePushToSignup = () => {
+    return props.history.push("/signup");
+  };
+
   // Function to handle Login credentials submission
   let handleSubmit = (event) => {
     event.preventDefault();
@@ -90,7 +95,7 @@ const LogIn = (props) => {
         </Modal.Body>
         <Modal.Footer>
           Don't have an account?
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={() => handlePushToSignup()}>
             Sign Up
           </Button>
           <Button
