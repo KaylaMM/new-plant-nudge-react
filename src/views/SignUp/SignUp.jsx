@@ -20,7 +20,7 @@ const SignUp = (props) => {
 
   // Function to route users to Login page
   let handlePushToLogIn = () => {
-    return props.history.push("/login");
+    // return props.history.push("/login");
   };
 
   //State to show modal

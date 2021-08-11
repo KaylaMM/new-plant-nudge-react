@@ -20,7 +20,7 @@ const LogIn = (props) => {
 
   // Function to route users to Signup page
   let handlePushToSignup = () => {
-    return props.history.push("/signup");
+    // return props.history.push("/signup");
   };
 
   // Function to handle Login credentials submission
