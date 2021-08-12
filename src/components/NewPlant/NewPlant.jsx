@@ -4,13 +4,25 @@ import Modal from "react-bootstrap/Modal";
 import { Form } from "react-bootstrap";
 
 const NewPlant = (plant) => {
-  const { plantType, plantLocation, water, lastWater } = plant;
+  //not destructuring correctly
+  const { type, ocation, water, lastWatering } = plant;
 
   const [show, setShow] = useState(false);
   const [plantType, setPlantType] = useState("");
   const [plantLocation, setPlantLocation] = useState("");
-  const [water, setWater] = useState("");
+  const [waterNeeded, setWaterNeeded] = useState("");
   const [lastWater, setLastWater] = useState("");
+
+  //incomplete
+  const postData = () => {
+    axios.post(`http://localhost:3001`, {
+      plantType,
+      plantLocation,
+      waterNeeded,
+      lastWater,
+    });
+  };
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
@@ -28,25 +40,37 @@ const NewPlant = (plant) => {
           <Form>
             <Form.Group className="m-3" controlId="formBasicPlantType">
               <Form.Label>What</Form.Label>
-              <Form.Control type="plant-type" placeholder="i.e. Pathos" onChange={(e) => setPlantType(e.target.value) />
+              <Form.Control
+                type="plant-type"
+                placeholder="i.e. Pathos"
+                onChange={(e) => setPlantType(e.target.value)}
+              />
             </Form.Group>
 
             <Form.Group className="m-3" controlId="formBasicPlantLocation">
               <Form.Label>Where</Form.Label>
-              <Form.Control type="location" placeholder="i.e. Living Room" onChange={(e) => setPlantLocation.target.value)/>
+              <Form.Control
+                type="location"
+                placeholder="i.e. Living Room"
+                onChange={(e) => setPlantLocation(e.target.value)}
+              />
             </Form.Group>
 
             <Form.Group className="m-3" controlId="formBasicPlantWater">
               <Form.Label>When</Form.Label>
-              <Form.Control type="plant-water" placeholder="i.e. Once a week" onChange={(e) => setWater(e.target.value) />
+              <Form.Control
+                type="plant-water"
+                placeholder="i.e. Once a week"
+                onChange={(e) => setWaterNeeded(e.target.value)}
+              />
             </Form.Group>
 
-            <Form.Group className="m-3" controlId="formBasicLastWatering" >
+            <Form.Group className="m-3" controlId="formBasicLastWatering">
               <Form.Label>Next</Form.Label>
               <Form.Control
                 type="last-watering"
                 placeholder="i.e. Tuesday 7/21"
-                onChange={(e) => setLastWater(e.target.value)
+                onChange={(e) => setLastWater(e.target.value)}
               />
             </Form.Group>
           </Form>
@@ -55,7 +79,7 @@ const NewPlant = (plant) => {
           <Button variant="secondary" onClick={handleClose}>
             Cancel
           </Button>
-          <Button variant="info" onClick={handleClose}>
+          <Button variant="info" onClick={postData} type="submit">
             Save
           </Button>
         </Modal.Footer>
