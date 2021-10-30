@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import { Form } from "react-bootstrap";
+import axios from "axios";
 
 const NewPlant = (plant) => {
   //not destructuring correctly
-  const { type, ocation, water, lastWatering } = plant;
+  const { type, location, water, lastWatering } = plant;
 
   const [show, setShow] = useState(false);
   const [plantType, setPlantType] = useState("");
